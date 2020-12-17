@@ -1,1 +1,2 @@
 FLASK_APP=microblog.py
+SECRET_KEY=testing_this_key1234
