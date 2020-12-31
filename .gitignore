@@ -205,3 +205,5 @@ dmypy.json
 app.db
 *.db
 */*.db
+logs/
+logs/*
