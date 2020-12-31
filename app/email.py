@@ -1,13 +1,13 @@
 """For all python email related purposes."""
 from threading import Thread
 
-from flask import render_template, current_app
+from flask import current_app
 from flask_mail import Message
 
 from app import mail
 
 
-def send_async_email(app: app, msg: str):
+def send_async_email(app, msg: str):
     """Send an asynchronous email.
 
     Args:

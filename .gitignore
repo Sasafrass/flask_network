@@ -172,6 +172,7 @@ ENV/
 env.bak/
 venv.bak/
 pythonenv*
+.flaskenv
 
 # Spyder project settings
 .spyderproject
