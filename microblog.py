@@ -1,6 +1,8 @@
-from app import app, db, cli
-from app.models import Post, User
+from app import create_app, db, cli
+from app.models import User, Post
 
+app = create_app()
+cli.register(app)
 
 # Add vars for flask shell env
 @app.shell_context_processor
