@@ -28,7 +28,7 @@ def create_app(config_class=Config):
     app.config.from_object(config_class)
 
     db.init_app(app)
-    migrate.init_app(app)
+    migrate.init_app(app, db)
     login.init_app(app)
     mail.init_app(app)
     bootstrap.init_app(app)
@@ -79,9 +79,9 @@ def create_app(config_class=Config):
 
 @babel.localeselector
 def get_locale():
-    #return request.accept_languages.best_match(app.config['LANGUAGES'])
+    return request.accept_languages.best_match(current_app.config['LANGUAGES'])
     #return 'es' # just spanish for testing purposes
-    return 'nl'
+    #return 'nl'
 
 
 from app import models

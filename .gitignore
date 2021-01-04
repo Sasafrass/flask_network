@@ -173,6 +173,7 @@ env.bak/
 venv.bak/
 pythonenv*
 .flaskenv
+.env.save
 
 # Spyder project settings
 .spyderproject
@@ -207,3 +208,5 @@ app.db
 */*.db
 logs/
 logs/*
+certs/
+certs/*
