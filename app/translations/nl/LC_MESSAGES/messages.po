@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-12-30 17:01+0100\n"
+"POT-Creation-Date: 2021-01-01 22:24+0100\n"
 "PO-Revision-Date: 2020-12-28 17:39+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: nl\n"
@@ -16,154 +16,144 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.9.0\n"
 
-#: app/__init__.py:20
+#: app/__init__.py:21
 msgid "Please log in to access this page."
 msgstr "Log in om toegang te krijgen tot deze pagina."
 
-#: app/email.py:46
+#: app/translate.py:10
+msgid "Error: the translation service is not configured"
+msgstr "Fout: De vertaalservice is niet geconfigureerd"
+
+#: app/translate.py:19
+msgid "Error: the translation service failed."
+msgstr "Fout: Er is iets fout gegaan met de vertaalservice."
+
+#: app/auth/email.py:12
 msgid "[Microblog] Reset Your Password"
 msgstr "Herstel uw wachtwoord"
 
-#: app/forms.py:11 app/forms.py:18 app/forms.py:51
+#: app/auth/forms.py:8 app/auth/forms.py:15 app/main/forms.py:10
 msgid "Username"
 msgstr "Gebruikersnaam"
 
-#: app/forms.py:12 app/forms.py:20 app/forms.py:43
+#: app/auth/forms.py:9 app/auth/forms.py:17 app/auth/forms.py:40
 msgid "Password"
 msgstr "Wachtwoord"
 
-#: app/forms.py:13
+#: app/auth/forms.py:10
 msgid "Remember Me"
 msgstr "Onthouden"
 
-#: app/forms.py:14 app/routes.py:83 app/templates/login.html:5
+#: app/auth/forms.py:11 app/auth/routes.py:29 app/templates/auth/login.html:5
 msgid "Sign In"
 msgstr "Inloggen"
 
-#: app/forms.py:19 app/forms.py:38
+#: app/auth/forms.py:16 app/auth/forms.py:35
 msgid "Email"
 msgstr "Email"
 
-#: app/forms.py:22 app/forms.py:45
+#: app/auth/forms.py:19 app/auth/forms.py:42
 msgid "Repeat Password"
 msgstr "Herhaal Wachtwoord"
 
-#: app/forms.py:24 app/routes.py:104 app/templates/register.html:5
+#: app/auth/forms.py:21 app/auth/routes.py:50
+#: app/templates/auth/register.html:5
 msgid "Register"
 msgstr "Registreren"
 
-#: app/forms.py:29 app/forms.py:64
+#: app/auth/forms.py:26 app/main/forms.py:23
 msgid "Please use a different username."
 msgstr "Kies alstublieft een andere gebruikersnaam."
 
-#: app/forms.py:34
+#: app/auth/forms.py:31
 msgid "Please use a different email address."
 msgstr "Gebruik alstublieft een ander e-mailadres."
 
-#: app/forms.py:39 app/forms.py:47
+#: app/auth/forms.py:36 app/auth/forms.py:44
 msgid "Request Password Reset"
 msgstr "Herstel Wachtwoord"
 
-#: app/forms.py:52
-msgid "About me"
-msgstr "Over mij"
-
-#: app/forms.py:54 app/forms.py:73
-msgid "Submit"
-msgstr "Verzenden"
-
-#: app/forms.py:72
-msgid "Say something"
-msgstr "Zeg iets"
-
-#: app/routes.py:35
-msgid "Your post is now live!"
-msgstr "Je bericht is nu live!"
-
-#: app/routes.py:46 app/templates/base.html:21
-msgid "Home"
-msgstr "Thuis"
-
-#: app/routes.py:61 app/templates/base.html:22
-msgid "Explore"
-msgstr "Verkennen"
-
-#: app/routes.py:74
+#: app/auth/routes.py:20
 msgid "Invalid username or password"
 msgstr "Onjuiste gebruikersnaam of wachtwoord"
 
-#: app/routes.py:102
+#: app/auth/routes.py:48
 msgid "Congratulations, you are now a registered user!"
 msgstr "Gefeliciteerd, je bent nu een geregistreerde gebruiker!"
 
-#: app/routes.py:117
+#: app/auth/routes.py:63
 msgid "Check your email for the instructions to reset your password"
 msgstr "Check uw e-mail voor de instructies om een nieuw wachtwoord in te stellen"
 
-#: app/routes.py:120 app/templates/reset_password_request.html:5
+#: app/auth/routes.py:66 app/templates/auth/reset_password_request.html:5
 msgid "Reset Password"
 msgstr "Herstel Wachtwoord"
 
-#: app/routes.py:134
+#: app/auth/routes.py:80
 msgid "Your password has been reset."
 msgstr "Je nieuwe wachtwoord is ingesteld"
 
-#: app/routes.py:163
+#: app/main/forms.py:11
+msgid "About me"
+msgstr "Over mij"
+
+#: app/main/forms.py:13 app/main/forms.py:32
+msgid "Submit"
+msgstr "Verzenden"
+
+#: app/main/forms.py:31
+msgid "Say something"
+msgstr "Zeg iets"
+
+#: app/main/forms.py:36 app/main/routes.py:158
+#, fuzzy
+msgid "Search"
+msgstr "Zoek"
+
+#: app/main/routes.py:35
+msgid "Your post is now live!"
+msgstr "Je bericht is nu live!"
+
+#: app/main/routes.py:46 app/templates/base.html:21
+msgid "Home"
+msgstr "Thuis"
+
+#: app/main/routes.py:61 app/templates/base.html:22
+msgid "Explore"
+msgstr "Verkennen"
+
+#: app/main/routes.py:90
 msgid "Your changes have been saved."
 msgstr "Je veranderingen zijn opgeslagen."
 
-#: app/routes.py:168 app/templates/edit_profile.html:5
+#: app/main/routes.py:95 app/templates/edit_profile.html:5
 msgid "Edit Profile"
 msgstr "Wijzig Profiel"
 
-#: app/routes.py:179 app/routes.py:199
+#: app/main/routes.py:106 app/main/routes.py:126
 #, python-format
 msgid "User %(username)s not found."
 msgstr "Gebruiker %(username)s niet gevonden."
 
-#: app/routes.py:182
+#: app/main/routes.py:109
 msgid "You cannot follow yourself!"
 msgstr "Je kunt niet jezelf volgen!"
 
-#: app/routes.py:186
+#: app/main/routes.py:113
 #, python-format
 msgid "You are following %(username)s!"
 msgstr "Je volgt %(username)s!"
 
-#: app/routes.py:202
+#: app/main/routes.py:129
 msgid "You cannot unfollow yourself!"
 msgstr "Je kunt niet jezelf ontvolgen!"
 
-#: app/routes.py:206
+#: app/main/routes.py:133
 #, python-format
 msgid "You are not following %(username)s."
 msgstr "Je volgt %(username)s niet."
-
-#: app/translate.py:9
-msgid "Error: the translation service is not configured"
-msgstr "Fout: De vertaalservice is niet geconfigureerd"
-
-#: app/translate.py:18
-msgid "Error: the translation service failed."
-msgstr "Fout: Er is iets fout gegaan met de vertaalservice."
-
-#: app/templates/404.html:4
-msgid "Not Found"
-msgstr "Niet Gevonden"
-
-#: app/templates/404.html:5 app/templates/500.html:6
-msgid "Back"
-msgstr "Terug"
-
-#: app/templates/500.html:4
-msgid "An unexpected error has occurred"
-msgstr "Er is een onverwachte fout opgetreden"
-
-#: app/templates/500.html:5
-msgid "The administrator has been notified. Sorry for the inconvenience!"
-msgstr "De administrator is op de hoogte gesteld. Excuses voor het ongemak!"
 
 #: app/templates/_post.html:14
 #, python-format
@@ -178,19 +168,19 @@ msgstr "Vertalen"
 msgid "Welcome to Microblog"
 msgstr "Welkom bij Microblog!"
 
-#: app/templates/base.html:26
+#: app/templates/base.html:33
 msgid "Login"
 msgstr "Inloggen"
 
-#: app/templates/base.html:28
+#: app/templates/base.html:35
 msgid "Profile"
 msgstr "Profiel"
 
-#: app/templates/base.html:29
+#: app/templates/base.html:36
 msgid "Logout"
 msgstr "Uitloggen"
 
-#: app/templates/base.html:67
+#: app/templates/base.html:74
 msgid "Error: Could not contact server."
 msgstr "Fout: Geen contact met server."
 
@@ -207,25 +197,17 @@ msgstr "Nieuwere berichten"
 msgid "Older posts"
 msgstr "Oudere berichten"
 
-#: app/templates/login.html:12
-msgid "New User?"
-msgstr "Nieuwe gebruiker?"
+#: app/templates/search.html:3
+msgid "Search Results"
+msgstr "Zoekresultaten"
 
-#: app/templates/login.html:12
-msgid "Click to Register!"
-msgstr "Klik om je aan te melden!"
+#: app/templates/search.html:12
+msgid "Previous results"
+msgstr "Vorige resultaten"
 
-#: app/templates/login.html:14
-msgid "Forgot Your Password?"
-msgstr "Wachtwoord vergeten?"
-
-#: app/templates/login.html:15
-msgid "Click to Reset It"
-msgstr "Klik om opnieuw in te stellen"
-
-#: app/templates/reset_password.html:5
-msgid "Reset Your Password"
-msgstr "Stel je wachtwoord opnieuw in"
+#: app/templates/search.html:17
+msgid "Next results"
+msgstr "Volgende"
 
 #: app/templates/user.html:8
 msgid "User"
@@ -256,4 +238,40 @@ msgstr "Volg"
 #: app/templates/user.html:27
 msgid "Unfollow"
 msgstr "Ontvolg"
+
+#: app/templates/auth/login.html:12
+msgid "New User?"
+msgstr "Nieuwe gebruiker?"
+
+#: app/templates/auth/login.html:12
+msgid "Click to Register!"
+msgstr "Klik om je aan te melden!"
+
+#: app/templates/auth/login.html:14
+msgid "Forgot Your Password?"
+msgstr "Wachtwoord vergeten?"
+
+#: app/templates/auth/login.html:15
+msgid "Click to Reset It"
+msgstr "Klik om opnieuw in te stellen"
+
+#: app/templates/auth/reset_password.html:5
+msgid "Reset Your Password"
+msgstr "Stel je wachtwoord opnieuw in"
+
+#: app/templates/errors/404.html:4
+msgid "Not Found"
+msgstr "Niet Gevonden"
+
+#: app/templates/errors/404.html:5 app/templates/errors/500.html:6
+msgid "Back"
+msgstr "Terug"
+
+#: app/templates/errors/500.html:4
+msgid "An unexpected error has occurred"
+msgstr "Er is een onverwachte fout opgetreden"
+
+#: app/templates/errors/500.html:5
+msgid "The administrator has been notified. Sorry for the inconvenience!"
+msgstr "De administrator is op de hoogte gesteld. Excuses voor het ongemak!"
 
