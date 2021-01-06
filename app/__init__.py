@@ -51,7 +51,7 @@ def create_app(config_class=Config):
     app.elasticsearch = Elasticsearch([app.config['ELASTICSEARCH_URL']]) \
         if app.config['ELASTICSEARCH_URL'] else None
 
-    print(f"ELASTICSEARCH: {app.elasticsearch}, {app.config['ELASTICSEARCH_URL']}")
+    print(f"ELASTICSEARCH yo: {app.elasticsearch}, {app.config['ELASTICSEARCH_URL']}")
 
     if not app.debug:
         if app.config['MAIL_SERVER']:
