@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-01 22:24+0100\n"
+"POT-Creation-Date: 2021-01-09 22:47+0100\n"
 "PO-Revision-Date: 2020-12-28 16:06+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -99,7 +99,7 @@ msgstr "Tu contraseña ha sido cambiada."
 msgid "About me"
 msgstr "Acerca de mí"
 
-#: app/main/forms.py:13 app/main/forms.py:32
+#: app/main/forms.py:13 app/main/forms.py:32 app/main/forms.py:48
 msgid "Submit"
 msgstr "Enviar"
 
@@ -111,6 +111,10 @@ msgstr "Dí algo"
 #, fuzzy
 msgid "Search"
 msgstr "Usuario"
+
+#: app/main/forms.py:47
+msgid "Message"
+msgstr ""
 
 #: app/main/routes.py:35
 msgid "Your post is now live!"
@@ -155,12 +159,21 @@ msgstr "¡No te puedes dejar de seguir a tí mismo!"
 msgid "You are not following %(username)s."
 msgstr "No estás siguiendo a %(username)s."
 
-#: app/templates/_post.html:14
+#: app/main/routes.py:179
+#, fuzzy
+msgid "Your message has been sent."
+msgstr "Tu contraseña ha sido cambiada."
+
+#: app/main/routes.py:181
+msgid "Send message"
+msgstr ""
+
+#: app/templates/_post.html:16
 #, python-format
 msgid "%(username)s said %(when)s"
 msgstr "%(username)s dijo %(when)s"
 
-#: app/templates/_post.html:24
+#: app/templates/_post.html:26
 msgid "Translate"
 msgstr "Traducir"
 
@@ -172,15 +185,19 @@ msgstr "Bienvenido a Microblog"
 msgid "Login"
 msgstr "Ingresar"
 
-#: app/templates/base.html:35
+#: app/templates/base.html:37 app/templates/messages.html:4
+msgid "Messages"
+msgstr ""
+
+#: app/templates/base.html:40
 msgid "Profile"
 msgstr "Perfil"
 
-#: app/templates/base.html:36
+#: app/templates/base.html:41
 msgid "Logout"
 msgstr "Salir"
 
-#: app/templates/base.html:74
+#: app/templates/base.html:79
 msgid "Error: Could not contact server."
 msgstr "Error: el servidor no pudo ser contactado."
 
@@ -189,13 +206,21 @@ msgstr "Error: el servidor no pudo ser contactado."
 msgid "Hi, %(username)s!"
 msgstr "¡Hola, %(username)s!"
 
-#: app/templates/index.html:17 app/templates/user.html:41
+#: app/templates/index.html:17 app/templates/user.html:48
 msgid "Newer posts"
 msgstr "Artículos siguientes"
 
-#: app/templates/index.html:22 app/templates/user.html:46
+#: app/templates/index.html:22 app/templates/user.html:53
 msgid "Older posts"
 msgstr "Artículos previos"
+
+#: app/templates/messages.html:12
+msgid "Newer messages"
+msgstr ""
+
+#: app/templates/messages.html:17
+msgid "Older messages"
+msgstr ""
 
 #: app/templates/search.html:3
 msgid "Search Results"
@@ -209,20 +234,25 @@ msgstr "Resultados previos"
 msgid "Next results"
 msgstr "Resultados próximos"
 
+#: app/templates/send_message.html:5
+#, python-format
+msgid "Send message to %(recipient)s"
+msgstr ""
+
 #: app/templates/user.html:8
 msgid "User"
 msgstr "Usuario"
 
-#: app/templates/user.html:11
+#: app/templates/user.html:11 app/templates/user_popup.html:9
 msgid "Last seen on"
 msgstr "Última visita"
 
-#: app/templates/user.html:13
+#: app/templates/user.html:13 app/templates/user_popup.html:12
 #, python-format
 msgid "%(count)d followers"
 msgstr "%(count)d seguidores"
 
-#: app/templates/user.html:13
+#: app/templates/user.html:13 app/templates/user_popup.html:13
 #, python-format
 msgid "%(count)d following"
 msgstr "siguiendo a %(count)d"
@@ -231,13 +261,17 @@ msgstr "siguiendo a %(count)d"
 msgid "Edit your profile"
 msgstr "Editar tu perfil"
 
-#: app/templates/user.html:20
+#: app/templates/user.html:20 app/templates/user_popup.html:20
 msgid "Follow"
 msgstr "Seguir"
 
-#: app/templates/user.html:27
+#: app/templates/user.html:27 app/templates/user_popup.html:27
 msgid "Unfollow"
 msgstr "Dejar de seguir"
+
+#: app/templates/user.html:34
+msgid "Send private message"
+msgstr ""
 
 #: app/templates/auth/login.html:12
 msgid "New User?"
@@ -274,4 +308,7 @@ msgstr "Ha ocurrido un error inesperado"
 #: app/templates/errors/500.html:5
 msgid "The administrator has been notified. Sorry for the inconvenience!"
 msgstr "El administrador ha sido notificado. ¡Lamentamos la inconveniencia!"
+
+#~ msgid "Newer messager"
+#~ msgstr ""
 

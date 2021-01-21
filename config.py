@@ -2,7 +2,8 @@ import os
 from dotenv import load_dotenv
 
 basedir = os.path.abspath(os.path.dirname(__file__))
-load_dotenv(os.path.join(basedir, '.env'))
+load_dotenv(os.path.join(basedir, ".env"))
+
 
 class Config(object):
     SECRET_KEY = os.environ.get("SECRET_KEY") or "you-will-never-guess"
@@ -24,11 +25,14 @@ class Config(object):
     POSTS_PER_PAGE = 3
 
     # Translation
-    LANGUAGES = ['en', 'es']
-    MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY')
+    LANGUAGES = ["en", "es"]
+    MS_TRANSLATOR_KEY = os.environ.get("MS_TRANSLATOR_KEY")
 
     # Search
-    ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
+    ELASTICSEARCH_URL = os.environ.get("ELASTICSEARCH_URL")
 
     # Heroku logging
-    LOG_TO_STDOUT = os.environ.get('LOG_TO_STDOUT')
+    LOG_TO_STDOUT = os.environ.get("LOG_TO_STDOUT")
+
+    # Redis
+    REDIS_URL = os.environ.get('REDIS_URL') or 'redis://'

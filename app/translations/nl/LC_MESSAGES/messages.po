@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-01 22:24+0100\n"
+"POT-Creation-Date: 2021-01-09 22:47+0100\n"
 "PO-Revision-Date: 2020-12-28 17:39+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: nl\n"
@@ -99,7 +99,7 @@ msgstr "Je nieuwe wachtwoord is ingesteld"
 msgid "About me"
 msgstr "Over mij"
 
-#: app/main/forms.py:13 app/main/forms.py:32
+#: app/main/forms.py:13 app/main/forms.py:32 app/main/forms.py:48
 msgid "Submit"
 msgstr "Verzenden"
 
@@ -111,6 +111,10 @@ msgstr "Zeg iets"
 #, fuzzy
 msgid "Search"
 msgstr "Zoek"
+
+#: app/main/forms.py:47
+msgid "Message"
+msgstr "Bericht"
 
 #: app/main/routes.py:35
 msgid "Your post is now live!"
@@ -155,12 +159,21 @@ msgstr "Je kunt niet jezelf ontvolgen!"
 msgid "You are not following %(username)s."
 msgstr "Je volgt %(username)s niet."
 
-#: app/templates/_post.html:14
+#: app/main/routes.py:179
+#, fuzzy
+msgid "Your message has been sent."
+msgstr "Je nieuwe wachtwoord is ingesteld"
+
+#: app/main/routes.py:181
+msgid "Send message"
+msgstr "Verstuur bericht"
+
+#: app/templates/_post.html:16
 #, python-format
 msgid "%(username)s said %(when)s"
 msgstr "%(username)s zei %(when)s"
 
-#: app/templates/_post.html:24
+#: app/templates/_post.html:26
 msgid "Translate"
 msgstr "Vertalen"
 
@@ -172,15 +185,19 @@ msgstr "Welkom bij Microblog!"
 msgid "Login"
 msgstr "Inloggen"
 
-#: app/templates/base.html:35
+#: app/templates/base.html:37 app/templates/messages.html:4
+msgid "Messages"
+msgstr "Berichten"
+
+#: app/templates/base.html:40
 msgid "Profile"
 msgstr "Profiel"
 
-#: app/templates/base.html:36
+#: app/templates/base.html:41
 msgid "Logout"
 msgstr "Uitloggen"
 
-#: app/templates/base.html:74
+#: app/templates/base.html:79
 msgid "Error: Could not contact server."
 msgstr "Fout: Geen contact met server."
 
@@ -189,12 +206,21 @@ msgstr "Fout: Geen contact met server."
 msgid "Hi, %(username)s!"
 msgstr "Hoi, %(username)s!"
 
-#: app/templates/index.html:17 app/templates/user.html:41
+#: app/templates/index.html:17 app/templates/user.html:48
 msgid "Newer posts"
 msgstr "Nieuwere berichten"
 
-#: app/templates/index.html:22 app/templates/user.html:46
+#: app/templates/index.html:22 app/templates/user.html:53
 msgid "Older posts"
+msgstr "Oudere berichten"
+
+#: app/templates/messages.html:12
+#, fuzzy
+msgid "Newer messages"
+msgstr "Nieuwere berichten"
+
+#: app/templates/messages.html:17
+msgid "Older messages"
 msgstr "Oudere berichten"
 
 #: app/templates/search.html:3
@@ -209,20 +235,25 @@ msgstr "Vorige resultaten"
 msgid "Next results"
 msgstr "Volgende"
 
+#: app/templates/send_message.html:5
+#, python-format
+msgid "Send message to %(recipient)s"
+msgstr "Verstuur bericht naar %(recipient)s"
+
 #: app/templates/user.html:8
 msgid "User"
 msgstr "Gebruiker"
 
-#: app/templates/user.html:11
+#: app/templates/user.html:11 app/templates/user_popup.html:9
 msgid "Last seen on"
 msgstr "Laatst gezien op"
 
-#: app/templates/user.html:13
+#: app/templates/user.html:13 app/templates/user_popup.html:12
 #, python-format
 msgid "%(count)d followers"
 msgstr "%(count)d volgers"
 
-#: app/templates/user.html:13
+#: app/templates/user.html:13 app/templates/user_popup.html:13
 #, python-format
 msgid "%(count)d following"
 msgstr "%(count)d volgend"
@@ -231,13 +262,17 @@ msgstr "%(count)d volgend"
 msgid "Edit your profile"
 msgstr "Wijzig je profiel"
 
-#: app/templates/user.html:20
+#: app/templates/user.html:20 app/templates/user_popup.html:20
 msgid "Follow"
 msgstr "Volg"
 
-#: app/templates/user.html:27
+#: app/templates/user.html:27 app/templates/user_popup.html:27
 msgid "Unfollow"
 msgstr "Ontvolg"
+
+#: app/templates/user.html:34
+msgid "Send private message"
+msgstr "Verstuur privébericht"
 
 #: app/templates/auth/login.html:12
 msgid "New User?"
@@ -274,4 +309,7 @@ msgstr "Er is een onverwachte fout opgetreden"
 #: app/templates/errors/500.html:5
 msgid "The administrator has been notified. Sorry for the inconvenience!"
 msgstr "De administrator is op de hoogte gesteld. Excuses voor het ongemak!"
+
+#~ msgid "Newer messager"
+#~ msgstr ""
 

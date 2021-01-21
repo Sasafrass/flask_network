@@ -19,7 +19,8 @@ def send_async_email(app, msg: str):
 
 
 def send_email(
-    subject: str, sender: str, recipients: list, text_body: str, html_body: str
+    subject: str, sender: str, recipients: list, text_body: str, html_body: str, 
+    attachments=None, sync=False
 ):
     """Send an email.
 
@@ -34,6 +35,14 @@ def send_email(
     msg.body = text_body
     msg.html = html_body
 
-    # Current_app is a context-aware variable, with no value in a different thread!
-    # Thus this requires the use of get_current_object()
-    Thread(target=send_async_email, args=(current_app._get_current_object(), msg)).start()
+    if attachments:
+        for attachment in attachments:
+            msg.attach(*attachment)
+    if sync:
+        mail.send(msg)
+    else:
+        # Current_app is a context-aware variable, with no value in a different thread!
+        # Thus this requires the use of get_current_object()
+        Thread(
+            target=send_async_email, args=(current_app._get_current_object(), msg)
+        ).start()
