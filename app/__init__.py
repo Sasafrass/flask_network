@@ -59,10 +59,10 @@ def create_app(config_class=Config):
     )
 
     # Redis
-    app.redis = Redis.from_url(app.config['REDIS_URL'])
-    app.task_queue = rq.Queue('microblog-tasks', connection=app.redis)
+    app.redis = Redis.from_url(app.config["REDIS_URL"])
+    app.task_queue = rq.Queue("microblog-tasks", connection=app.redis)
 
-    #print(f"ELASTICSEARCH: {app.elasticsearch}, {app.config['ELASTICSEARCH_URL']}")
+    # print(f"ELASTICSEARCH: {app.elasticsearch}, {app.config['ELASTICSEARCH_URL']}")
 
     if not app.debug:
         if app.config["MAIL_SERVER"]:

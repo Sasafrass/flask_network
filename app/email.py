@@ -19,8 +19,13 @@ def send_async_email(app, msg: str):
 
 
 def send_email(
-    subject: str, sender: str, recipients: list, text_body: str, html_body: str, 
-    attachments=None, sync=False
+    subject: str,
+    sender: str,
+    recipients: list,
+    text_body: str,
+    html_body: str,
+    attachments=None,
+    sync=False,
 ):
     """Send an email.
 
